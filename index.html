@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LuxeGlow Beauty Salon</title>
+  <title>LuxeGlow Beauty Studio | Hair, Nails, Skincare & Makeup</title>
+  <meta name="description" content="LuxeGlow Beauty Studio offers professional hair styling, nails, facials, skincare, and makeup services designed to help you look beautiful and feel confident.">
   <link rel="stylesheet" href="style.css"/>
 </head>
 
@@ -13,19 +14,25 @@
     <a href="#" class="logo">
     <img src="luxeglow-logo.jpg" alt="LuxeGlow Beauty Studio">
 </a>
-
-    <nav>
-        <a href="#">Home</a>
+<button
+    class="menu-toggle"
+    id="menu-toggle"
+    aria-label="Open navigation menu"
+    aria-expanded="false">
+    ☰
+</button>
+    <nav id="nav-menu">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
-<section class="hero">
+<section class="hero" id="home">
     <p>BEAUTY • CONFIDENCE • YOU</p>
 
-    <h2>Look Good. Feel Unstoppable.</h2>
+<h1>Look Good. Feel Unstoppable.</h1>
 
     <p>
         From flawless nails and glowing skin to beautiful hair,
@@ -117,51 +124,51 @@
     <div class="gallery-container">
 
         <div class="gallery-item">
-            <img src="hair-1.webp" alt="Elegant hair styling">
+            <img src="hair-1.webp" alt="Elegant hair styling" loading="lazy">
         </div>
 
         <div class="gallery-item">
-            <img src="hair-2.webp" alt="Professional hair transformation">
+            <img src="hair-2.webp" alt="Professional hair transformation" loading="lazy">
         </div>
 
         <div class="gallery-item gallery-tall">
-            <img src="hair-3.webp" alt="Beautiful finished hairstyle">
+            <img src="hair-3.webp" alt="Beautiful finished hairstyle" loading="lazy">
         </div>
 
         <div class="gallery-item gallery-large">
-            <img src="nail-1.webp" alt="Luxury nail design">
+            <img src="nail-1.webp" alt="Luxury nail design" loading="lazy">
         </div>
 
         <div class="gallery-item">
-            <img src="nail-2.webp" alt="Professional manicure">
+            <img src="nail-2.webp" alt="Professional manicure" loading="lazy">
         </div>
 
         <div class="gallery-item">
-            <img src="nail-3.webp" alt="Detailed nail art">
+            <img src="nail-3.webp" alt="Detailed nail art" loading="lazy">
         </div>
 
         <div class="gallery-item">
-            <img src="makeup-1.webp" alt="Professional makeup look">
+            <img src="makeup-1.webp" alt="Professional makeup look" loading="lazy">
         </div>
 
         <div class="gallery-item">
-            <img src="makeup-2.webp" alt="Elegant makeup transformation">
+            <img src="makeup-2.webp" alt="Elegant makeup transformation" loading="lazy">
         </div>
 
         <div class="gallery-item">
-            <img src="makeup-3.webp" alt="Glamorous makeup finish">
+            <img src="makeup-3.webp" alt="Glamorous makeup finish" loading="lazy">
         </div>
 
         <div class="gallery-item">
-            <img src="facial-1.webp" alt="Professional facial treatment">
+            <img src="facial-1.webp" alt="Professional facial treatment" loading="lazy">
         </div>
 
         <div class="gallery-item">
-            <img src="facial-2.webp" alt="Skincare treatment at the salon">
+            <img src="facial-2.webp" alt="Skincare treatment at the salon" loading="lazy">
         </div>
 
         <div class="gallery-item gallery-small">
-            <img src="facial-3.webp" alt="Glowing skin after beauty treatment">
+            <img src="facial-3.webp" alt="Glowing skin after beauty treatment" loading="lazy">
         </div>
 
     </div>
@@ -252,7 +259,7 @@
                 left for my wedding looking very beautiful"
             </p>
 
-            <h3>— Faith Peter</h3>
+            <h3>— Luxeglow client</h3>
         </div>
 
         <div class="testimonial-card">
@@ -262,7 +269,7 @@
                 better than I imagined."
             </p>
 
-            <h3>-- Precious Uche</h3>
+        <h3>— Luxeglow client</h3>
         </div>
 
         <div class="testimonial-card">
@@ -271,12 +278,12 @@
                 felt professional and welcoming. I'm definitely coming back."
             </p>
 
-            <h3>— Peace Oche</h3>
+            <h3>— Luxeglow client</h3>
         </div>
 
     </div>
-
 </section>
+
 <section class="contact" id="contact">
 
     <p>READY WHEN YOU ARE</p>
@@ -323,16 +330,16 @@
 
             <h3>Request an Appointment</h3>
 
-            <form>
+            <form id="booking-form">
 
                 <label for="name">Your Name</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" required>
 
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone">
+                <input type="tel" id="phone" name="phone" placeholder="e.g 08011100000" autocomplete="tel" required>
 
                 <label for="service">Choose a Service</label>
-                <select id="service" name="service">
+                <select id="service" name="service" required>
                     <option value="">Select a service</option>
                     <option value="hair">Hair Styling</option>
                     <option value="nails">Nails</option>
@@ -341,47 +348,64 @@
                 </select>
 
                 <label for="date">Preferred Date</label>
-                <input type="date" id="date" name="date">
+                <input type="date" id="date" name="date" required>
 
                 <label for="message">Anything We Should Know?</label>
-                <textarea id="message" name="message"></textarea>
+                <textarea id="message" name="message" placeholder="Tell us anything we should know......"></textarea>
 
                 <button type="submit">Request Appointment</button>
 
             </form>
+            <p id="form-message"></p>
 
         </div>
 
     </div>
 
 </section>
-<footer>
 
-    <div class="footer-content">
 
-        <div class="footer-brand">
-            <h2>LuxeGlow</h2>
-            <p>
-                Beauty that helps you look good, feel confident,
-                and be completely yourself.
-            </p>
-        </div>
+    <footer>
+        <div class="footer-content">
 
-        <div class="footer-links">
-            <h3>Quick Links</h3>
-
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-        </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2026 LuxeGlow Beauty Studio. All rights reserved.</p>
+    <div class="footer-brand">
+        <h2>LuxeGlow</h2>
+        <p>
+            Beauty that helps you look good, feel confident,
+            and be completely yourself.
+        </p>
     </div>
 
+    <div class="footer-links">
+        <h3>Quick Links</h3>
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-contact">
+        <h3>Contact Us</h3>
+
+        <p>0800 000 0000</p>
+        <p>hello@luxeglow.com</p>
+        <p>Your Location Here</p>
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+    <p>&copy; 2026 LuxeGlow Beauty Studio. All rights reserved.</p>
+</div>
+
 </footer>
+<div id="lightbox">
+    <button id="lightbox-close">&times;</button>
+    <img id="lightbox-image" src="" alt="">
+</div>
+<script src="script.js"></script>
 
 </body>
 
